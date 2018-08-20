@@ -5,6 +5,9 @@ package com.dataservicios.ttauditalicorpaward.util;
 public final class GlobalConstant {
 
     public static String dominio = "http://ttaudit.com";
+    //public static String dominio = "http://192.168.1.73";
+    // public static String dominio = "http://192.168.1.73/ttaudit.com/ttauditSystemAuditor";
+    //public static String dominio = "http://local.ttaudit.com";
     public static final String URL_USER_IMAGES = dominio + "/media/users/";
     public static String directory_images = "/Pictures/" ;
     public static final String JPEG_FILE_PREFIX = "_award_";

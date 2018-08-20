@@ -49,23 +49,23 @@ public class AuditUtil {
         if(!file.exists()){
             return true;
         }
-        Bitmap bbicon = null;
+        Bitmap bitmap = null;
         //Bitmap scaledBitmap;
-        bbicon = BitmapLoader.loadBitmap(file.getAbsolutePath(),280,280);
+        bitmap = BitmapLoader.loadBitmap(file.getAbsolutePath(),650,650);
 
 //        if(Build.MODEL.equals("MotoG3")){
-//            //scaledBitmap = BitmapLoader.scaleDown() BitmapLoader.rotateImage(bbicon,0);
-//            scaledBitmap = BitmapLoader.rotateImage(BitmapLoader.scaleDown(bbicon, 540 , true),0);
+//            //scaledBitmap = BitmapLoader.scaleDown() BitmapLoader.rotateImage(bitmap,0);
+//            scaledBitmap = BitmapLoader.rotateImage(BitmapLoader.scaleDown(bitmap, 540 , true),0);
 //        } else {
-//            //scaledBitmap = BitmapLoader.rotateImage(bbicon,90);
-//            scaledBitmap = BitmapLoader.rotateImage(BitmapLoader.scaleDown(bbicon, 540 , true),90);
+//            //scaledBitmap = BitmapLoader.rotateImage(bitmap,90);
+//            scaledBitmap = BitmapLoader.rotateImage(BitmapLoader.scaleDown(bitmap, 540 , true),90);
 //        }
 
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        bbicon.compress(Bitmap.CompressFormat.JPEG,50, bos);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100, baos);
         try {
 
-            ContentBody photo = new ByteArrayBody(bos.toByteArray(), file.getName());
+            ContentBody photo = new ByteArrayBody(baos.toByteArray(), file.getName());
             AndroidMultiPartEntity mpEntity = new AndroidMultiPartEntity(new AndroidMultiPartEntity.ProgressListener() {
                 @Override
                 public void transferred(long num) {

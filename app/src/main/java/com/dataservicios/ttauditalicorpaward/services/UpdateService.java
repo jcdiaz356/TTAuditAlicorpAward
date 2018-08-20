@@ -21,7 +21,7 @@ public class UpdateService extends Service {
 
     private Context context = this;
 
-    static final int DELAY =  60000; //2 minutos de espera
+    static final int DELAY =  30000; //2 minutos de espera
     //static final int DELAY = 9000; //9 segundo de espera
     private boolean runFlag = false;
     private Updater updater;
